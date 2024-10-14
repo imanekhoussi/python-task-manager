@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 class TaskManager:
-    def _init_(self):
+    def __init__(self):
         self.tasks = []
         self.load_tasks()
 
@@ -43,7 +43,7 @@ class TaskManager:
         self.save_tasks()
 
 class TaskManagerGUI:
-    def _init_(self, master):
+    def __init__(self, master):
         self.master = master
         self.master.title("Gestionnaire de Tâches")
         self.task_manager = TaskManager()
@@ -125,5 +125,5 @@ def main():
     app = TaskManagerGUI(root)
     root.mainloop()
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
